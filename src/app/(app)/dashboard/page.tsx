@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { TaskManager } from "@/components/task-manager";
+import { EmailSender } from "@/components/email-sender";
 
 const services = [
   {
@@ -130,6 +131,28 @@ export default function Dashboard() {
                 </Card>
               );
             })}
+          </div>
+
+          {/* Email Testing Section */}
+          <div className="relative mt-16 md:mt-24">
+            <DashedLine
+              className="text-muted-foreground mb-12 md:mb-16"
+              orientation="horizontal"
+            />
+
+            <div className="mb-12 md:mb-16">
+              <h2 className="text-foreground mb-4 text-2xl tracking-tight md:text-3xl">
+                Email Service Testing
+              </h2>
+              <p className="text-muted-foreground mb-8 max-w-2xl text-lg">
+                Test your email service by sending a personalized welcome message. 
+                Configure your Resend API key to start sending emails.
+              </p>
+              
+              <div className="flex justify-center">
+                <EmailSender />
+              </div>
+            </div>
           </div>
 
           {/* Task Manager Section */}
