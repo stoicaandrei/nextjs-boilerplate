@@ -17,6 +17,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { TaskManager } from "@/components/task-manager";
 
 const services = [
   {
@@ -129,6 +130,16 @@ export default function Dashboard() {
                 </Card>
               );
             })}
+          </div>
+
+          {/* Task Manager Section */}
+          <div className="relative mt-16 md:mt-24">
+            <DashedLine
+              className="text-muted-foreground mb-12 md:mb-16"
+              orientation="horizontal"
+            />
+
+            <TaskManager />
           </div>
 
           {/* Quick Stats Section */}
