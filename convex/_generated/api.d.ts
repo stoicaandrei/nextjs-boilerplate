@@ -8,12 +8,12 @@
  * @module
  */
 
-import type * as emailMutations from "../emailMutations.js";
-import type * as emailQueries from "../emailQueries.js";
-import type * as email_templates_index from "../email_templates/index.js";
-import type * as email_templates_styles from "../email_templates/styles.js";
-import type * as email_templates_welcome_email from "../email_templates/welcome_email.js";
-import type * as emails from "../emails.js";
+import type * as emailActions from "../emailActions.js";
+import type * as emails_components_defaults from "../emails/components/defaults.js";
+import type * as emails_components_index from "../emails/components/index.js";
+import type * as emails_components_styles from "../emails/components/styles.js";
+import type * as emails_components_welcome_email from "../emails/components/welcome_email.js";
+import type * as emails_index from "../emails/index.js";
 import type * as http from "../http.js";
 import type * as tasks from "../tasks.js";
 
@@ -32,12 +32,12 @@ import type {
  * ```
  */
 declare const fullApi: ApiFromModules<{
-  emailMutations: typeof emailMutations;
-  emailQueries: typeof emailQueries;
-  "email_templates/index": typeof email_templates_index;
-  "email_templates/styles": typeof email_templates_styles;
-  "email_templates/welcome_email": typeof email_templates_welcome_email;
-  emails: typeof emails;
+  emailActions: typeof emailActions;
+  "emails/components/defaults": typeof emails_components_defaults;
+  "emails/components/index": typeof emails_components_index;
+  "emails/components/styles": typeof emails_components_styles;
+  "emails/components/welcome_email": typeof emails_components_welcome_email;
+  "emails/index": typeof emails_index;
   http: typeof http;
   tasks: typeof tasks;
 }>;

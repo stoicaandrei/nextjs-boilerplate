@@ -22,7 +22,7 @@ export function EmailSender() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
-  const sendEmail = useAction(api.emails.sendEmailAction);
+  const sendEmail = useAction(api.emailActions.sendWelcomeEmailAction);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
