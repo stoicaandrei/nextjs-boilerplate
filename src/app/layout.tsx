@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 
 import type { Metadata } from "next";
 
+import { ConvexClientProvider } from "@/components/convex-client-provider";
 import { StyleGlideProvider } from "@/components/styleglide-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import "@/styles/globals.css";
@@ -138,15 +139,17 @@ export default function RootLayout({
         />
       </head>
       <body className={`${dmSans.variable} ${inter.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <StyleGlideProvider />
-          {children}
-        </ThemeProvider>
+        <ConvexClientProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <StyleGlideProvider />
+            {children}
+          </ThemeProvider>
+        </ConvexClientProvider>
       </body>
     </html>
   );
