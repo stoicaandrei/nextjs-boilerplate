@@ -50,6 +50,11 @@ RESEND_API_KEY=your-resend-api-key
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
 
+**Note:** For Convex environment variables, use the Convex CLI:
+```bash
+npx convex env set API_KEY secret-api-key
+```
+
 5. **Run the development server:**
 ```bash
 pnpm dev
