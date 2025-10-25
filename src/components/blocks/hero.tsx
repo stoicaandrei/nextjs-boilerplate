@@ -51,8 +51,8 @@ export const Hero = () => {
 
           <div className="mt-8 flex flex-wrap items-center gap-4 lg:flex-nowrap">
             <Button asChild>
-              <a href="https://github.com/shadcnblocks/mainline-nextjs-template">
-                Get template
+              <a href="/dashboard">
+                Start building
               </a>
             </Button>
             <Button
@@ -61,10 +61,10 @@ export const Hero = () => {
               asChild
             >
               <a
-                href="https://shadcnblocks.com"
+                href="https://stoica.dev"
                 className="max-w-56 truncate text-start md:max-w-none"
               >
-                Built by shadcnblocks.com
+                Built by Andrei Stoica
                 <ArrowRight className="stroke-3" />
               </a>
             </Button>
